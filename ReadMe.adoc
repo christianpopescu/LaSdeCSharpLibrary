@@ -1,0 +1,6 @@
+= LaSdeCSharpLibrary
+
+== Light Agile Software Development Engineer Library
+
+Implementation in C#
+
