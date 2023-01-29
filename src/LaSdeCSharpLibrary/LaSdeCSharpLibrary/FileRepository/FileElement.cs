@@ -10,6 +10,7 @@ namespace LaSdeCSharpLibrary.FileRepository
     ///  File element keeps the mapping between the logical key that identify the File and the physical
     ///  path to to the file
     /// </summary>
+ 
     internal class FileElement
     {
         #region Fields and Properties
