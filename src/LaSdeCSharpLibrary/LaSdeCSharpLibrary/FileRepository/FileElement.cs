@@ -27,12 +27,12 @@ namespace LaSdeCSharpLibrary.FileRepository
             StringBuilder message= new StringBuilder();
             if (string.IsNullOrEmpty(fileLogicalKey))
             {
-                message.Append("File logical key is null or empty empty");
+                message.Append("File logical key is null or empty");
                 error = true;
             }
             if (string.IsNullOrEmpty(filePath)) 
             {
-                message.Append(message.Length > 0 ? "," : "").Append("File path is nul or empty");
+                message.Append(message.Length > 0 ? "," : "").Append("File path is null or empty");
                 error = true;
             }
             if (error)
