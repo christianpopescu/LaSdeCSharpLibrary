@@ -13,10 +13,15 @@ namespace LaSdeCSharpLibrary.FileRepository
         
         public IList<FileElement> FileElements { get; set; }
 
-        public FileRepository() 
+        private IDataRepository dataRepository;
+
+        public FileRepository(IDataRepository pDataRepository) 
         { 
             Root = string.Empty;    
             FileElements = new List<FileElement>();
+            dataRepository = pDataRepository;
         }
+
+
     }
 }
