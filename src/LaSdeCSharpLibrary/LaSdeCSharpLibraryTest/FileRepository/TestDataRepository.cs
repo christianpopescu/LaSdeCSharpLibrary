@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace LaSdeCSharpLibraryTest.FileRepository
 {
+    /// <summary>
+    /// Repository for Test
+    /// </summary>
     internal class TestDataRepository : IDataRepository
     {
         public int AddFileElement(FileElement fileElement)
