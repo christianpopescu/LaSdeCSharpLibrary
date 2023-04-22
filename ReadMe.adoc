@@ -6,3 +6,5 @@ Implementation in C#
 
 
 link:https://ccpprofessional.visualstudio.com/LaSdeCSharpLibrary[Project management]
+
+On Azure is keeping the project management
