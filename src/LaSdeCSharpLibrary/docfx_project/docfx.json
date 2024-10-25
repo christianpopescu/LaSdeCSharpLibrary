@@ -10,7 +10,7 @@
         }
       ],
       "dest": "api",
-      "includePrivateMembers": false,
+      "includePrivateMembers": true,
       "disableGitFeatures": false,
       "disableDefaultFilter": false,
       "noRestore": false,
