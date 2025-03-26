@@ -16,3 +16,16 @@ To update the tool
 dotnet tool update -g docfx
 
 ![Update docfx](./img/Update_DocFx.png)
+
+
+## Unit testing using xUnit and nUnit
+
+Packages installed
+
+![Test Packaging](img/Test_Packaging.png)
+
+
+
+### Installed Nuget Packages
+
+![Package Manager Menu](img/PackageManagerMenu.png)
