@@ -16,14 +16,14 @@ namespace LaSdeCSharpLibraryTest.AbstractDataType
             using (var reader = new StringReader(input))
             {
                 // Act
-                listOfElements.LoadLinesFromText(reader);
+                listOfElements.LoadLines(reader);
             }
 
             // Assert
-            Assert.AreEqual(3, listOfElements.Elements.Count);
-            Assert.AreEqual("Line1", listOfElements.Elements[0]);
-            Assert.AreEqual("Line2", listOfElements.Elements[1]);
-            Assert.AreEqual("Line3", listOfElements.Elements[2]);
+            Assert.That(listOfElements.Elements.Count, Is.EqualTo(3));
+            Assert.That(listOfElements.Elements[0], Is.EqualTo("Line1"));
+            Assert.That(listOfElements.Elements[1], Is.EqualTo("Line2"));
+            Assert.That(listOfElements.Elements[2], Is.EqualTo("Line3"));
         }
 
         [Test]
@@ -35,11 +35,11 @@ namespace LaSdeCSharpLibraryTest.AbstractDataType
             using (var reader = new StringReader(input))
             {
                 // Act
-                listOfElements.LoadLinesFromText(reader);
+                listOfElements.LoadLines(reader);
             }
 
             // Assert
-            Assert.AreEqual(0, listOfElements.Elements.Count);
+            Assert.That(listOfElements.Elements.Count, Is.EqualTo(0));
         }
     }
 }

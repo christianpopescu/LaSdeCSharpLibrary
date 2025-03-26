@@ -29,7 +29,7 @@ namespace LaSdeCSharpLibrary.AbstractDataType
         /// Reads the lines from a text and stores them in the Elements list
         /// </summary>
         /// <param name="reader"></param>
-        public void LoadLinesFromText(TextReader reader)
+        public void LoadLines(TextReader reader)
         {
             if (reader == null)
             {
@@ -40,8 +40,25 @@ namespace LaSdeCSharpLibrary.AbstractDataType
             {
                 Elements.Add(line);
             }
-
-
         }
+
+        /// <summary>
+        /// Reads the lines from a text and stores them in the Elements list
+        /// </summary>
+        /// <param name="text"></param>
+        /// <exception cref="ArgumentNullException"></exception>
+        public void LoadLines(string text)
+        {
+            if (text == null)
+            {
+                throw new ArgumentNullException(nameof(text));
+            }
+            using (StringReader reader = new StringReader(text))
+            {
+                LoadLines(reader);
+            }
+        }
+
+
     }
 }
