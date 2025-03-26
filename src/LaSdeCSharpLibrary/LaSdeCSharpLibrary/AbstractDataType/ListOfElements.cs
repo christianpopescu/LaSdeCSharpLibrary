@@ -59,6 +59,16 @@ namespace LaSdeCSharpLibrary.AbstractDataType
             }
         }
 
-
+        /// <summary>
+        /// Reads the lines from a file and stores them in the Elements list
+        /// </summary>
+        /// <param name="fileName"></param>
+        public void LoadLinesFromFile(string fileName)
+        {
+            using (StreamReader reader = new StreamReader(fileName))
+            {
+                LoadLines(reader);
+            }
+        }
     }
 }

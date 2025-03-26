@@ -74,5 +74,66 @@ namespace LaSdeCSharpLibrary.Tests
             // Act & Assert
             Assert.Throws<ArgumentNullException>(() => listOfElements.LoadLines((string)null));
         }
+
+        [Fact]
+        public void LoadLinesFromFile_ValidFile_AddsLinesToList()
+        {
+            // Arrange
+            var listOfElements = new ListOfElements();
+            var fileName = "testfile.txt";
+            File.WriteAllText(fileName, "Line1\nLine2\nLine3");
+
+            try
+            {
+                // Act
+                listOfElements.LoadLinesFromFile(fileName);
+
+                // Assert
+                Assert.Equal(3, listOfElements.Elements.Count);
+                Assert.Equal("Line1", listOfElements.Elements[0]);
+                Assert.Equal("Line2", listOfElements.Elements[1]);
+                Assert.Equal("Line3", listOfElements.Elements[2]);
+            }
+            finally
+            {
+                // Cleanup
+                File.Delete(fileName);
+            }
+        }
+
+        [Fact]
+        public void LoadLinesFromFile_EmptyFile_AddsNoLinesToList()
+        {
+            // Arrange
+            var listOfElements = new ListOfElements();
+            var fileName = "emptyfile.txt";
+            File.WriteAllText(fileName, "");
+
+            try
+            {
+                // Act
+                listOfElements.LoadLinesFromFile(fileName);
+
+                // Assert
+                Assert.Empty(listOfElements.Elements);
+            }
+            finally
+            {
+                // Cleanup
+                File.Delete(fileName);
+            }
+        }
+
+        [Fact]
+        public void LoadLinesFromFile_NonExistentFile_ThrowsFileNotFoundException()
+        {
+            // Arrange
+            var listOfElements = new ListOfElements();
+            var fileName = "nonexistentfile.txt";
+
+            // Act & Assert
+            Assert.Throws<FileNotFoundException>(() => listOfElements.LoadLinesFromFile(fileName));
+        }
+
     }
 }
