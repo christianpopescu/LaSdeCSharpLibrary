@@ -12,7 +12,7 @@ namespace LaSdeCSharpWinForm.SimpleForms
         private System.Windows.Forms.Button buttonOk = new Button();
         private System.Windows.Forms.Button buttonCancel = new Button();
 
-        private void InitButton(System.Windows.Forms.Button button,
+        protected void InitButton(System.Windows.Forms.Button button,
             Point position,
             Point size,
             string text)

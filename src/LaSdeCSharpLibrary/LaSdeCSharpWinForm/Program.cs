@@ -7,9 +7,18 @@ namespace LaSdeCSharpWinForm
     {
         static void Main(string[] args)
         {
-           var form = new FormOkCancel();
+            Action<Action<string>> action = DoSomething;
+               ;
+           
+            var form = new FormActionLog("Action", action);
 
             Application.Run(form);
+        }
+
+        static void DoSomething(Action<string> logSomething)
+        {
+            logSomething("Test\r\n");
+            logSomething("Test1\r\n");
         }
     }
 }
