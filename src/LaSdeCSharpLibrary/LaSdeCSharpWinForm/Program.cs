@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using LaSdeCSharpWinForm.SimpleForms;
+using System.Windows.Forms;
 
 namespace LaSdeCSharpWinForm
 {
@@ -6,19 +7,8 @@ namespace LaSdeCSharpWinForm
     {
         static void Main(string[] args)
         {
-           var form = new Form
-           {
-               Text = "Hello World",
-               Width = 800,
-               Height = 600
-           };
-            var label = new Label
-            {
-                Text = "Hello, World!",
-                Dock = DockStyle.Fill,
-                TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-            };
-            form.Controls.Add(label);
+           var form = new FormOkCancel();
+
             Application.Run(form);
         }
     }
