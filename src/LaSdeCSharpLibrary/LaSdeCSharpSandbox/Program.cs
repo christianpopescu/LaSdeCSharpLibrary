@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Sandbox LaSdeCSharp!");
+            Sandbox.ConcatenateFiles();
         }
     }
 }
