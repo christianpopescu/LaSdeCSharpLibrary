@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LaSdeCSharpLibrary.FilesAndFolders;
+using LaSdeCSharpLibrary.Logger;
 
 namespace LaSdeCSharpSandbox
 {
@@ -16,15 +17,19 @@ namespace LaSdeCSharpSandbox
         {
             // Create a list of files to concatenate
             List<string> files = new List<string>
-            {
-                @"D:\Temp\TempToDelete\WindowsDesktopApp\WindowsDesktopApp\framework.h",
-                @"D:\Temp\TempToDelete\WindowsDesktopApp\WindowsDesktopApp\Resource.h",
-                @"D:\Temp\TempToDelete\WindowsDesktopApp\WindowsDesktopApp\targetver.h"
-            };
+                {
+                    @"D:\Temp\TempToDelete\WindowsDesktopApp\WindowsDesktopApp\framework.h",
+                    @"D:\Temp\TempToDelete\WindowsDesktopApp\WindowsDesktopApp\Resource.h",
+                    @"D:\Temp\TempToDelete\WindowsDesktopApp\WindowsDesktopApp\targetver.h"
+                };
             // Specify the output file
             string outputFile = @"D:\Temp\TempToDelete\WindowsDesktopApp\WindowsDesktopApp\output.txt";
-            // Call the ConcatenateFiles method from the FileCompositionHelper class
-            FileCompositionHelper.ConcatenateFiles(files, outputFile);
+
+            // Create an instance of FileCompositionHelper
+            FileCompositionHelper fileHelper = new FileCompositionHelper( ConsoleLogger.Instance);
+
+            // Call the ConcatenateFiles method from the FileCompositionHelper instance
+            fileHelper.ConcatenateFiles(files, outputFile);
         }
     }
 }
