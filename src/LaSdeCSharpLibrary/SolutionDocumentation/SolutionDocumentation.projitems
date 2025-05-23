@@ -9,5 +9,21 @@
     <Import_RootNamespace>SolutionDocumentation</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)LaSdeCSharpLibrary-main.md" />
+    <None Include="$(MSBuildThisFileDirectory)Pages\Log\Log.md" />
+    <None Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\NotesOnProject.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\img\ChangeCsprojectToWinForm.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\img\ConsoleCSharpApplication.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\img\DependencyToWinFormOnProject.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\img\MinimalWinFormProgram.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\img\PackageManagerMenu.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\img\Test_Packaging.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\img\Update_DocFx.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\img\WinFormProjectType.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\NotesOnProject\src\ProgramWinForms.cs" />
   </ItemGroup>
 </Project>

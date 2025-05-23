@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaSdeCSharpSandbox", "LaSde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaSdeCSharpWinForm", "LaSdeCSharpWinForm\LaSdeCSharpWinForm.csproj", "{D48E2E6C-53CC-4E1F-8959-9BAB46C1D933}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SolutionDocumentation", "SolutionDocumentation\SolutionDocumentation.shproj", "{3F29AE8D-16D2-429B-A8FD-64A593F83ACB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {325E6E60-9655-4272-928A-303A4D622190}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		SolutionDocumentation\SolutionDocumentation.projitems*{3f29ae8d-16d2-429b-a8fd-64a593f83acb}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
